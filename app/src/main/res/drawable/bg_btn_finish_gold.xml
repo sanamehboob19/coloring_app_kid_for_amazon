@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed State (Pushed Down) -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:top="3dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <solid android:color="#F57F17" />
+                </shape>
+            </item>
+            <item android:top="3dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <solid android:color="#FFC107" />
+                    <stroke android:width="1.5dp" android:color="#FFF9C4" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Normal 3D Raised State -->
+    <item>
+        <layer-list>
+            <!-- 3D Bottom Shadow Lip -->
+            <item android:top="4dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <solid android:color="#E65100" />
+                </shape>
+            </item>
+            <!-- Top Golden Face -->
+            <item android:bottom="4dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <gradient
+                        android:angle="90"
+                        android:startColor="#FFB300"
+                        android:endColor="#FFEA00"
+                        android:type="linear" />
+                    <stroke android:width="1.5dp" android:color="#FFFFFF" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

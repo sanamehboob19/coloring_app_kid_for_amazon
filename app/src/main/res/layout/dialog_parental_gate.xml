@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_game_header_banner"
+    android:padding="@dimen/_16sdp">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFFFF"
+        app:cardCornerRadius="@dimen/_24sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/kids_primary"
+        app:strokeWidth="@dimen/_3sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_18sdp">
+
+            <!-- Lock Icon -->
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:contentDescription="Parental Lock"
+                android:src="@android:drawable/ic_lock_lock"
+                app:tint="@color/kids_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="sans-serif-black"
+                android:text="PARENTS ONLY"
+                android:textColor="@color/kids_primary"
+                android:textSize="@dimen/_16ssp" />
+
+            <!-- Dynamic Question Text -->
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Please tap number 7"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/_14ssp" />
+
+            <!-- Numbers 1 to 10 Grid Layout -->
+            <GridLayout
+                android:id="@+id/gridLayoutNumbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:gravity="center">
+
+            </GridLayout>
+
+            <!-- Close Button -->
+            <TextView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="sans-serif-bold"
+                android:text="Cancel"
+                android:textColor="#757575"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

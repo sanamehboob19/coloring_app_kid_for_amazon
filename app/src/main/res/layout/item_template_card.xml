@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardTemplateRoot"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_130sdp"
+    android:layout_margin="@dimen/_6sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_16sdp"
+    app:cardElevation="@dimen/_5sdp"
+    app:strokeColor="@color/card_border"
+    app:strokeWidth="@dimen/_2sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/layoutSpiralNotches"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_14sdp"
+            android:background="#EEEEEE"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="#424242" />
+
+            <View
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="#424242" />
+
+            <View
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="#424242" />
+
+            <View
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="#424242" />
+
+            <View
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="#424242" />
+
+            <View
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="#424242" />
+
+            <View
+                android:layout_width="@dimen/_4sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="#424242" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivTemplatePreview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="Coloring Template"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutSpiralNotches"
+            tools:src="@mipmap/ic_launcher" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="44dp"
+    android:viewportWidth="32"
+    android:viewportHeight="44">
+
+    <!-- Flag Border -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M1,2 L31,2 L31,34 L16,43 L1,34 Z" />
+
+    <!-- Flag Inner Colored Face -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M3,4 L29,4 L29,32 L16,40 L3,32 Z" />
+
+    <!-- Top Hanging String Ring -->
+    <path
+        android:strokeColor="#212121"
+        android:strokeWidth="2"
+        android:pathData="M1,2 L31,2" />
+</vector>

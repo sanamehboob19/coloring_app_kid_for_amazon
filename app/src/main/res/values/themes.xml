@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ColoringGamesForKids" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+
+
+        <!--  Window Layout & Background  -->
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowBackground">@drawable/app_doddle_bg</item>
+
+        <!--  Status Bar Settings -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+
+        <!-- Navigation Bar Settings  -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <!-- Window Behavior  -->
+        <item name="android:windowContentTransitions">false</item>
+
+
+
+
+    </style>
+
+    <style name="Theme.ColoringGamesForKids" parent="Base.Theme.ColoringGamesForKids" />
+</resources>

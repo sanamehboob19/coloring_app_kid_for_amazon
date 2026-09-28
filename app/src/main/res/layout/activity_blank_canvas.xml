@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kids_primary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/kids_accent"
+            app:cardCornerRadius="@dimen/_19sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_gravity="center"
+                android:contentDescription="Back"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="@color/text_dark" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--  Save / Camera Button -->
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="@drawable/bg_bubble_btn_green"
+                android:contentDescription="Save Drawing"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_camera" />
+
+            <!-- 🗑 Clear / Trash Button -->
+            <ImageButton
+                android:id="@+id/btnClear"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="@drawable/bg_bubble_btn_orange"
+                android:contentDescription="Clear Canvas"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_trash" />
+
+            <!--  Undo Button -->
+            <ImageButton
+                android:id="@+id/btnUndo"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@drawable/bg_bubble_btn_pink"
+                android:contentDescription="Undo"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_undo" />
+
+            <!-- Celebration DONE Button -->
+            <TextView
+                android:id="@+id/btnFinish"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/bg_btn_finish_gold"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:shadowColor="#BF360C"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="DONE! ⭐"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardWhiteBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_24sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTopBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <!-- FULL-SIZE DRAWING CANVAS -->
+            <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.DrawingView
+                android:id="@+id/drawingView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/layoutBottomControls"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- 🎛 BOTTOM TOOLS & COLOR PALETTE DOCK -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutBottomControls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <!-- Tools & Brush Size Slider Row -->
+                <LinearLayout
+                    android:id="@+id/layoutToolsRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--  Brush Tool -->
+                    <TextView
+                        android:id="@+id/btnToolBrush"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_38sdp"
+                        android:background="@drawable/bg_tool_brush"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:text="Brush 🖌️"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <!-- Eraser Tool -->
+                    <TextView
+                        android:id="@+id/btnToolEraser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_38sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:background="@drawable/bg_tool_eraser"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:paddingHorizontal="@dimen/_14sdp"
+                        android:text="Eraser 🧼"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <!-- Brush Size Slider -->
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderBrushSize"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:stepSize="5.0"
+                        android:value="25.0"
+                        android:valueFrom="10.0"
+                        android:valueTo="80.0"
+                        app:thumbColor="@color/kids_primary"
+                        app:trackColorActive="@color/kids_primary"
+                        app:trackColorInactive="@color/card_border" />
+                </LinearLayout>
+
+                <!--  Horizontal Color Swatches Carousel -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvColors"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_44sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutToolsRow"
+                    tools:listitem="@layout/item_color_swatch" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

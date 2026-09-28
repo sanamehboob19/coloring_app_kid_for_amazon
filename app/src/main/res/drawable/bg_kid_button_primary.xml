@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 🟡 PRESSED STATE (Button is pressed down, shadow shrinks) -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Bottom Shadow (Flat when pressed) -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <solid android:color="@color/kids_primary_dark" />
+                </shape>
+            </item>
+            <!-- Top Face (Moved down by 2dp to look pressed) -->
+            <item android:top="4dp" android:bottom="0dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <solid android:color="@color/kids_primary" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 🟠 NORMAL STATE (Button pops out with a 6dp bottom shadow) -->
+    <item>
+        <layer-list>
+            <!-- Bottom Shadow -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <solid android:color="@color/kids_primary_dark" />
+                </shape>
+            </item>
+            <!-- Top Face (Elevated with shadow visible below) -->
+            <item android:bottom="6dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp" />
+                    <solid android:color="@color/kids_primary" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

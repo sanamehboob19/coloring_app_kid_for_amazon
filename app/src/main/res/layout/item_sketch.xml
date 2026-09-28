@@ -1,0 +1,75 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_135sdp"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/dark_gray"
+    app:strokeWidth="@dimen/_1sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_1sdp">
+
+
+    <ImageView
+        android:id="@+id/img_sketch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/img_place_holder" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:cardBackgroundColor="@color/light_green"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <TextView
+            android:id="@+id/btn_new"
+            style="@style/p1"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="Pro"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9ssp"
+            android:visibility="visible" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvItemNumber"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:background="@drawable/bg_primary_round"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/img_original"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:visibility="gone"
+        tools:src="@drawable/img_place_holder" />
+
+
+</com.google.android.material.card.MaterialCardView>

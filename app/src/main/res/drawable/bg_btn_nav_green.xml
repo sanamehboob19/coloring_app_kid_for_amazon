@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 🟢 PRESSED STATE (Button is depressed down) -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Dark Green Bottom Shadow -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#1B5E20" />
+                </shape>
+            </item>
+            <!-- Top Vibrant Green Face (Pushed down by 3dp) -->
+            <item android:top="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="#00C853" />
+                    <stroke android:width="3dp" android:color="#B9F6CA" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 🟢 NORMAL STATE (Elevated 3D with bottom shadow) -->
+    <item>
+        <layer-list>
+            <!-- Dark Green Bottom Shadow -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#1B5E20" />
+                </shape>
+            </item>
+            <!-- Top Vibrant Green Face (Elevated with shadow below) -->
+            <item android:bottom="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="#00E676" />
+                    <stroke android:width="3dp" android:color="#E8F5E9" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutBannerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77000000">
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutBannerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_8sdp"
+        android:rotation="-4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Hanging Garland String -->
+        <View
+            android:id="@+id/viewGarlandString"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_3sdp"
+            android:background="#1B1B1B"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutFlagsRow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layoutFlagsRow"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <!-- 🚩 LARGE VIBRANT FLAGS: E - X - C - E - L - L - E - N - T - ! -->
+        <LinearLayout
+            android:id="@+id/layoutFlagsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- E (Crimson Red) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#FF1744"
+                android:text="E" />
+
+            <!-- X (Vibrant Orange) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#FF6D00"
+                android:text="X" />
+
+            <!-- C (Sunny Gold) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#FFD600"
+                android:text="C" />
+
+            <!-- E (Bright Grass Green) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#00E676"
+                android:text="E" />
+
+            <!-- L (Fresh Mint Teal) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#1DE9B6"
+                android:text="L" />
+
+            <!-- L (Sky Cyan) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#00B0FF"
+                android:text="L" />
+
+            <!-- E (Royal Blue) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#2979FF"
+                android:text="E" />
+
+            <!-- N (Magic Purple) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#AA00FF"
+                android:text="N" />
+
+            <!-- T (Neon Pink) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#FF4081"
+                android:text="T" />
+
+            <!-- ! (Amber Gold) -->
+            <TextView
+                style="@style/LargePennantLetterStyle"
+                android:background="@drawable/bg_pennant_flag"
+                android:backgroundTint="#FFAB00"
+                android:visibility="gone"
+                android:text="!" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

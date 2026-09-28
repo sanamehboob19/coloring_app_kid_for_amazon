@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="#EFFFFFFF" />
+
+    <corners android:radius="@dimen/_18sdp" />
+
+    <stroke
+        android:width="@dimen/_2sdp"
+        android:color="@color/kids_accent" />
+
+    <padding
+        android:left="@dimen/_18sdp"
+        android:top="@dimen/_9sdp"
+        android:right="@dimen/_18sdp"
+        android:bottom="@dimen/_9sdp" />
+
+</shape>

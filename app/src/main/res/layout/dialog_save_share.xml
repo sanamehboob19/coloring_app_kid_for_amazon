@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_16sdp"
+    app:cardBackgroundColor="@color/kids_accent"
+    app:cardCornerRadius="@dimen/_24sdp"
+    app:cardElevation="@dimen/_12sdp"
+    app:strokeColor="@color/kids_accent"
+    app:strokeWidth="@dimen/_3sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_12sdp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTopHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvDialogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="My Masterpiece! 🎨"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:background="@drawable/bg_bubble_btn_pink"
+                android:contentDescription="Close"
+                android:scaleType="centerInside"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardFrameOuter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_260sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/kids_secondary"
+            app:cardCornerRadius="@dimen/_18sdp"
+            app:cardElevation="@dimen/_6sdp"
+            app:strokeColor="#76FF03"
+            app:strokeWidth="@dimen/_3sdp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutActionButtons"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTopHeader">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_6sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_14sdp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/ivArtPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    tools:src="@tools:sample/avatars" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:id="@+id/layoutActionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:background="@drawable/bg_bubble_btn_blue"
+                android:contentDescription="Share"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_share" />
+
+            <ImageButton
+                android:id="@+id/btnSaveGallery"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:background="@drawable/bg_bubble_btn_orange"
+                android:contentDescription="Save"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_save" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Dimmed Outer Ring -->
+    <path
+        android:fillColor="#1B3B2B"
+        android:pathData="M32,32m-30,0a30,30 0 1,0 60,0a30,30 0 1,0 -60,0" />
+
+    <!-- Translucent Green Core -->
+    <path
+        android:fillAlpha="0.85"
+        android:fillColor="#2E5C43"
+        android:pathData="M32,32m-26,0a26,26 0 1,0 52,0a26,26 0 1,0 -52,0" />
+
+    <!-- Bold Sunny Yellow Checkmark -->
+    <path
+        android:strokeColor="#FFEA00"
+        android:strokeWidth="6.5"
+        android:fillColor="#00000000"
+        android:pathData="M18,33 L27,42 L46,21" />
+</vector>

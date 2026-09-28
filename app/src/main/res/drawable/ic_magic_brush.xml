@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- 🪵 Wooden Handle (Tapered Artist Handle) -->
+    <path
+        android:fillColor="#E67E22"
+        android:strokeColor="#B95C00"
+        android:strokeWidth="1.2"
+        android:pathData="M34,26 L58,3 A3.5,3.5 0 0,1 62,7 L40,32 Z" />
+
+    <!-- Handle Highlight (Glossy Wood Shine) -->
+    <path
+        android:fillAlpha="0.5"
+        android:fillColor="#FFFFFF"
+        android:pathData="M37,25 L58,4 A1.5,1.5 0 0,1 60,6 L39,29 Z" />
+
+    <!-- 🔘 Silver Metal Ferrule (Main Body) -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:strokeColor="#78909C"
+        android:strokeWidth="1.2"
+        android:pathData="M27,33 L35,25 L41,31 L33,39 Z" />
+
+    <!-- Ferrule Crimp Indentation Rings -->
+    <path
+        android:strokeColor="#90A4AE"
+        android:strokeWidth="1.5"
+        android:pathData="M29,31 L37,23 M31,35 L39,27" />
+
+    <!-- Ferrule Highlight Shine -->
+    <path
+        android:fillAlpha="0.8"
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,28 L37,23 L39,25 L34,30 Z" />
+
+    <!-- 🖌️ Natural Bristles (Dark Sable Hair) -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M27,33 L33,39 C31,44 26,49 20,53 C14,57 9,59 7,59 C7,57 9,52 13,46 C17,40 22,35 27,33 Z" />
+
+    <!-- Bristle Hair Strand Highlights -->
+    <path
+        android:strokeColor="#8D6E63"
+        android:strokeWidth="1.2"
+        android:pathData="M25,36 C21,43 16,49 11,54 M28,38 C24,45 20,50 15,55" />
+
+    <!-- 🎨 Wet Paint-Dipped Tip (Magic Glowing Color) -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M7,59 C7,57 9,54 12,50 C15,47 18,45 21,44 C19,48 16,52 12,55 C9,57 7,59 7,59 Z" />
+
+    <!-- Wet Tip Gloss Specular Dot -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M11,53 C10,54 9,56 8,57 C9,56 11,54 11,53 Z" />
+</vector>

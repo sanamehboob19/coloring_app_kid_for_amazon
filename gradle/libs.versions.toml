@@ -1,0 +1,136 @@
+# =========================================================
+# 🔹 VERSIONS
+# =========================================================
+[versions]
+
+# --- Android Core ---
+agp = "9.2.1"
+kotlin = "2.3.21"
+coreKtx = "1.18.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+activity = "1.13.0"
+constraintlayout = "2.2.1"
+
+# --- Lifecycle ---
+lifecycleViewmodelKtx = "2.10.0"
+
+# --- Testing ---
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+
+# --- Hilt (DI) ---
+hiltAndroid = "2.59.2"
+hilt = "2.59.2"
+hiltCommon = "1.3.0"
+
+# --- WorkManager ---
+workRuntimeKtx = "2.11.2"
+
+# --- UI / UX Libraries ---
+sdp = "1.1.1"
+ssp = "1.1.1"
+dotsIndicator = "5.1.0"
+lottie = "6.7.1"
+shimmer = "0.5.0"
+powerMenu = "2.2.4"
+konfettiXml = "2.0.4"
+
+# --- GLIDE ---
+glide = "4.16.0"
+
+# --- GLOBAL ADS ---
+firebaseCrashlytics = "20.0.3"
+firebaseAnalytics = "23.0.0"
+firebaseMessaging = "25.0.1"
+firebaseConfigVersion = "23.1.0"
+googleGmsGoogleServices = "4.4.4"
+googleFirebaseCrashlytics = "3.0.7"
+
+
+# ---  Data & Networking ---
+converterGson = "3.0.0"
+gson = "2.13.2"
+kotlinxCoroutinesAndroidVersion = "1.10.2"
+
+# ---- Room Database  ---
+roomKtx = "2.8.4"
+
+
+# =========================================================
+# 🔹 LIBRARIES
+# =========================================================
+[libraries]
+
+# ---------- Core Android ----------
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# ---------- UI ----------
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+konfetti-xml = { module = "nl.dionsegijn:konfetti-xml", version.ref = "konfettiXml" }
+
+
+# ---------- Lifecycle ----------
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelKtx" }
+
+# ---------- WorkManager ----------
+androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workRuntimeKtx" }
+
+# ---------- Hilt (DI) ----------
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
+androidx-hilt-common = { group = "androidx.hilt", name = "hilt-common", version.ref = "hiltCommon" }
+
+# ---------- Testing ----------
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+# ---------- UI / UX ----------
+sdp-android = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "sdp" }
+ssp-android = { group = "com.intuit.ssp", name = "ssp-android", version.ref = "ssp" }
+dots-indicator = { group = "com.tbuonomo", name = "dotsindicator", version.ref = "dotsIndicator" }
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+shimmer = { group = "com.facebook.shimmer", name = "shimmer", version.ref = "shimmer" }
+power-menu = { group = "com.github.skydoves", name = "powermenu", version.ref = "powerMenu" }
+# ---------- GLIDE IMG LOADING ----------
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
+# ---------- GLOBAL ADS ----------
+
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+firebaseConfig = { group = "com.google.firebase", name = "firebase-config", version.ref = "firebaseConfigVersion" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics", version.ref = "firebaseCrashlytics" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
+
+# ----------  Data & Networking  ----------
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterGson" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+jetbrains-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroidVersion" }
+
+# ----------   Room Database  ----------
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }
+
+
+# =========================================================
+# 🔹 PLUGINS
+# =========================================================
+[plugins]
+
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "googleFirebaseCrashlytics" }
+

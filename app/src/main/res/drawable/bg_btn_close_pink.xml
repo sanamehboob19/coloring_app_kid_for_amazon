@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 🌸 PRESSED STATE -->
+    <item android:state_pressed="true">
+        <layer-list>
+
+            <!-- Soft Pink Bottom Shadow -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/kids_primary_dark" />
+                </shape>
+            </item>
+
+            <!-- Baby Pink Face -->
+            <item android:top="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/kids_primary_dark" />
+                    <stroke
+                        android:width="3dp"
+                        android:color="@color/kids_primary_dark" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+
+    <!-- 🌸 NORMAL STATE -->
+    <item>
+        <layer-list>
+
+            <!-- Soft Pink 3D Bottom Shadow -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/kids_secondary" />
+                </shape>
+            </item>
+
+            <!-- Light Baby Pink Face -->
+            <item android:bottom="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/paint_pink" />
+                    <stroke
+                        android:width="3dp"
+                        android:color="#FDE1EA" />
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+
+</selector>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Basic System Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- 🎨 Primary Kids Brand Colors (Cheerful & Playful) -->
+    <color name="kids_primary">#FF6F00</color>           <!-- Energetic Candy Orange -->
+    <color name="kids_primary_dark">#E65100</color>      <!-- Dark Orange for 3D button shadows -->
+    <color name="kids_secondary">#00C853</color>         <!-- Playful Grass Green -->
+    <color name="kids_accent">#FFD600</color>            <!-- Sunny Yellow -->
+
+    <!-- 🌈 Background Pastel Shades (Easy on kids eyes) -->
+    <color name="bg_sky_blue">#E1F5FE</color>           <!-- Calm light sky background -->
+    <color name="bg_soft_purple">#EDE7F6</color>        <!-- Soft lavender background -->
+    <color name="bg_canvas">#FAFAFA</color>             <!-- Paper white for drawing board -->
+
+    <!-- 🖍️ Default Color Palette for Brushes & Paints -->
+    <color name="paint_red">#FF1744</color>
+    <color name="paint_pink">#F50057</color>
+    <color name="paint_purple">#AA00FF</color>
+    <color name="paint_blue">#2979FF</color>
+    <color name="paint_cyan">#00E5FF</color>
+    <color name="paint_teal">#1DE9B6</color>
+    <color name="paint_green">#00E676</color>
+    <color name="paint_yellow">#FFEA00</color>
+    <color name="paint_orange">#FF9100</color>
+    <color name="paint_brown">#8D6E63</color>
+    <color name="paint_gray">#90A4AE</color>
+    <color name="paint_black">#212121</color>
+
+    <!-- 🎛️ UI & Button Elements -->
+    <color name="btn_green_shadow">#1B5E20</color>      <!-- For 3D push-button effect -->
+    <color name="btn_blue_shadow">#0D47A1</color>
+    <color name="btn_yellow_shadow">#F57F17</color>
+    <color name="card_border">#FFE082</color>
+    <color name="text_dark">#37474F</color>
+
+    <color name="dark_gray">#5E5F60</color>
+    <color name="light_green">#80B07D</color>
+
+
+
+
+
+
+</resources>

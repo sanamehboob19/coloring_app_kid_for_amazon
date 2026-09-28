@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="300"
+    android:viewportHeight="300">
+
+    <!-- 🍏 Apple Leaf Outline (Closed Boundary) -->
+    <path
+        android:pathData="M150,60 C160,30 190,30 200,45 C200,65 175,75 150,60 Z"
+        android:strokeWidth="6"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- 🪵 Apple Stem Outline (Closed Boundary) -->
+    <path
+        android:pathData="M148,60 C146,80 152,80 150,60 Z"
+        android:strokeWidth="6"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round" />
+
+    <!-- 🍎 Main Apple Body Outline (Thick, fully closed boundary) -->
+    <path
+        android:pathData="M150,90
+            C120,70 70,75 50,110
+            C25,155 35,235 90,265
+            C120,280 145,260 150,260
+            C155,260 180,280 210,265
+            C265,235 275,155 250,110
+            C230,75 180,70 150,90 Z"
+        android:strokeWidth="8"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- ✨ Cute Highlight Detail (Optional interior shape) -->
+    <path
+        android:pathData="M80,120 C70,140 70,170 80,190"
+        android:strokeWidth="6"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round" />
+</vector>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_210sdp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardNotebookRoot"
+        android:layout_width="@dimen/_175sdp"
+        android:layout_height="@dimen/_175sdp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="@dimen/_6sdp"
+        app:strokeColor="#212121"
+        app:strokeWidth="@dimen/_2sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutSpiralRings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_15sdp"
+                android:background="#E8E8E8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:background="#424242" />
+
+                <View
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:background="#424242" />
+
+                <View
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:background="#424242" />
+
+                <View
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:background="#424242" />
+
+                <View
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:background="#424242" />
+
+                <View
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:background="#424242" />
+
+                <View
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_11sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:background="#424242" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivCollectionPreview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="Collection Theme"
+                android:padding="@dimen/_4sdp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/layoutBottomSpine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSpiralRings"
+                tools:src="@mipmap/ic_launcher" />
+
+            <FrameLayout
+                android:id="@+id/layoutBottomSpine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@color/kids_primary"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/tvCollectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-black"
+                    android:shadowColor="#80000000"
+                    android:shadowDx="0"
+                    android:shadowDy="2"
+                    android:shadowRadius="3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    tools:text="Space" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvNewBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="#FF1744"
+                android:elevation="@dimen/_4sdp"
+                android:fontFamily="sans-serif-black"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:text="New"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSpiralRings"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

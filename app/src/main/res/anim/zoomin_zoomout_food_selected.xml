@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:shareInterpolator="false" android:ordering="sequentially"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:duration="1000" android:fillAfter="true" android:repeatCount="0" android:fromYDelta="20.000004%p" android:toYDelta="-19.0%p" />
+    <translate android:duration="2000" android:fillAfter="true" android:repeatCount="0" android:fromYDelta="-19.0%p" android:toYDelta="20.000004%p" />
+</set>

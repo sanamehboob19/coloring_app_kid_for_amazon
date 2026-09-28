@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_16sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_24sdp"
+    app:cardElevation="@dimen/_8sdp"
+    app:strokeColor="@color/kids_accent"
+    app:strokeWidth="@dimen/_4sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_24sdp">
+
+
+        <FrameLayout
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/bg_play_button_yellow"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="📡❌"
+                android:textSize="@dimen/_32ssp" />
+        </FrameLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_16sdp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oops! No Internet"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8sdp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please check your Wi-Fi or mobile data connection to download magical coloring pages!"
+            android:textColor="@color/paint_gray"
+            android:textSize="@dimen/_13ssp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_24sdp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRetry"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:text="Try Again 🔄"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/kids_primary"
+            app:cornerRadius="@dimen/_16sdp"
+            app:strokeColor="@color/kids_primary_dark"
+            app:strokeWidth="@dimen/_3sdp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LargePennantLetterStyle">
+        <item name="android:layout_width">@dimen/_28sdp</item>
+        <item name="android:layout_height">@dimen/_42sdp</item>
+        <item name="android:layout_marginHorizontal">@dimen/_2sdp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">@dimen/_6sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:shadowColor">#BF000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="p1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+    </style>
+
+    <style name="H3" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/kids_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+
+    <style name="rlHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:paddingHorizontal">@dimen/_12sdp</item>
+    </style>
+
+    <style name="backBtn">
+        <item name="android:layout_width">@dimen/_30sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/ic_back</item>
+    </style>
+
+    <style name="Theme_Dialog" parent="ThemeOverlay.Material3.Dialog">
+        <item name="android:windowMinWidthMajor">92%</item>
+        <item name="android:windowMinWidthMinor">92%</item>
+        <item name="android:windowAnimationStyle">@style/DialogBounceAnimation</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+    <style name="DialogBounceAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_bounce</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+
+
+
+
+
+
+</resources>
