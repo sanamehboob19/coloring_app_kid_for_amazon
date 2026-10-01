@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused state on TV remote -->
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/kids_accent" />
+            <stroke android:width="5dp" android:color="@color/white" />
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/kids_primary" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_doddle_bg_landscape">
+
+    <!-- 🌟 TOP HEADER OPTIMIZED FOR LANDSCAPE -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTopHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_game_header_banner"
+        android:elevation="@dimen/_6sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:shadowColor="#66000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="2"
+            android:text="ART PREVIEW ✨"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 📺 TV Remote Focusable Back Button -->
+    <FrameLayout
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:background="@drawable/bg_play_button_yellow"
+        android:clickable="true"
+        android:elevation="@dimen/_6sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTopHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutTopHeader">
+
+        <ImageView
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:contentDescription="Back"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+    <!-- 📺 TV Remote Focusable Delete Button -->
+    <FrameLayout
+        android:id="@+id/btnDelete"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/bg_btn_close_pink"
+        android:clickable="true"
+        android:elevation="@dimen/_6sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTopHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutTopHeader">
+
+        <ImageView
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:contentDescription="Delete"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+    <!-- 🖼️ CENTERED ART PREVIEW CONTAINER -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_48sdp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        app:cardBackgroundColor="#FFFFFFFF"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTopHeader"
+        app:strokeColor="@color/card_border"
+        app:strokeWidth="@dimen/_3sdp">
+
+        <ImageView
+            android:id="@+id/ivFullArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:contentDescription="Saved Artwork"
+            android:scaleType="fitCenter" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

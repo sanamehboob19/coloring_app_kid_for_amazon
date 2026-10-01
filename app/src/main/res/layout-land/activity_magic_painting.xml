@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kids_primary"
+    android:padding="@dimen/_10sdp">
+
+    <!-- 🎛️ LEFT SIDE PANEL: Action Buttons (Back, Save, Clear, DONE) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutLeftSidePanel"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_game_header_banner"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Back Button -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/kids_accent"
+                app:cardCornerRadius="@dimen/_19sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Back"
+                    android:src="@android:drawable/ic_menu_revert"
+                    app:tint="@color/text_dark" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Save Button -->
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_bubble_btn_green"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:contentDescription="Save Drawing"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_camera" />
+
+            <!-- Clear Button -->
+            <ImageButton
+                android:id="@+id/btnClear"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:background="@drawable/bg_bubble_btn_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:contentDescription="Clear"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_trash" />
+
+            <!-- DONE Button -->
+            <TextView
+                android:id="@+id/btnFinish"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:background="@drawable/bg_btn_finish_gold"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:shadowColor="#BF360C"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="DONE! ⭐"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 🖼️ RIGHT SIDE: Full Centered Magic Painting Canvas Area -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardWhiteBody"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layoutLeftSidePanel"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/_8sdp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCanvasContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:cardElevation="0dp"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp">
+
+                <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.MagicPaintingView
+                    android:id="@+id/magicPaintingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

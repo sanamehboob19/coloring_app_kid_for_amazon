@@ -123,7 +123,7 @@
             android:background="@color/white">
 
             <!-- FULL-SIZE DRAWING CANVAS -->
-            <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.DrawingView
+            <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.DrawingView
                 android:id="@+id/drawingView"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -230,5 +230,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

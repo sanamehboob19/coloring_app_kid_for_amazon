@@ -13,7 +13,7 @@ plugins {
 
 
 android {
-    namespace = "com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting"
+    namespace = "com.nz.coloringgamesforkidsdoodle.drawingkids.painting"
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting"
+        applicationId = "com.nz.coloringgamesforkidsdoodle.drawingkids.painting"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

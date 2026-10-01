@@ -62,6 +62,13 @@
     </style>
 
 
+    <!-- Global TV Focusable Card Style -->
+    <style name="Widget.App.FocusableCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
 
 
 

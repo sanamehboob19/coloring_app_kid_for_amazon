@@ -22,7 +22,7 @@
         android:padding="@dimen/_8sdp">
 
 
-        <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.PixelGridView
+        <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.PixelGridView
             android:id="@+id/previewGridView"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_110sdp"

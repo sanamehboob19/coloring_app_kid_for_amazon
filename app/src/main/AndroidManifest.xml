@@ -6,6 +6,17 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!-- 📺 Declare that Touchscreen is NOT required for TV / Fire TV -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- Optional: Declare Leanback support if you use TV specific UI libraries -->
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+
     <application
         android:name=".app.MyApp"
         android:allowBackup="true"

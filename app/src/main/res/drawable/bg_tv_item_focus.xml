@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When TV remote highlights/focuses the item -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#33FFD600" /> <!-- Soft golden translucent tint -->
+            <corners android:radius="20dp" />
+            <stroke android:width="5dp" android:color="@color/kids_accent" /> <!-- Bright Yellow Border -->
+        </shape>
+    </item>
+    <!-- Default state (Transparent border) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="20dp" />
+            <stroke android:width="0dp" android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</selector>

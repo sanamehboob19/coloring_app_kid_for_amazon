@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_doddle_bg_landscape">
+
+    <!-- 🌟 TOP BAR OPTIMIZED FOR LANDSCAPE -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTopBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_game_header_banner"
+        android:elevation="@dimen/_6sdp"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 📺 TV Remote Focusable Back Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_17sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:strokeColor="@color/kids_primary"
+            app:strokeWidth="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center"
+                android:contentDescription="Back"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="@color/kids_primary" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvNumberTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:shadowColor="#66000000"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:text="Number Eight ⭐"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnReset"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 📺 TV Remote Focusable Retry / Reset Button -->
+        <ImageButton
+            android:id="@+id/btnReset"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:background="@drawable/bg_bubble_btn_orange"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:contentDescription="Retry"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_rotate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 🔢 CENTER TRACING STAGE CARD -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTracingStage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_48sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:strokeColor="@color/card_border"
+        app:strokeWidth="@dimen/_3sdp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutBottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTopBar">
+
+        <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.NumberTracingView
+            android:id="@+id/numberTracingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 🎛️ BOTTOM NAVIGATION BUTTONS -->
+    <LinearLayout
+        android:id="@+id/layoutBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 📺 TV Remote Focusable Prev Button -->
+        <TextView
+            android:id="@+id/btnPrevNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:background="@drawable/bg_kid_button_primary"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="◀ Prev"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <!-- 📺 TV Remote Focusable Next Button -->
+        <TextView
+            android:id="@+id/btnNextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:background="@drawable/bg_btn_finish_gold"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_22sdp"
+            android:text="Next ▶"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

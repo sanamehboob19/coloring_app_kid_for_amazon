@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0EEEE">
+
+    <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.color_by_num_module.widget.ColoringView
+        android:id="@+id/overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- 🔍 TV Remote Focusable Zoom Reset Button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/resetZoomLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:contentDescription="Zoom"
+                android:src="@drawable/ic_full_screen" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 💡 TV Remote Focusable Idle Bulb Hint -->
+    <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.color_by_num_module.widget.CircularCountdownBulbView
+        android:id="@+id/imgIdleBulb"
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="@dimen/_54sdp"
+        android:background="@drawable/bg_floating_bulb"
+        android:clickable="true"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="12dp"
+        android:src="@drawable/img_bulb"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+    <!-- 🎨 Horizontal Color Picker Bar for TV/Tablets -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_color"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/ad_container"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_color" />
+
+    <!-- 💡 TV Remote Focusable Next Hint Button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/helpLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintBottom_toTopOf="@+id/rv_color"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/helpsCountTv"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:background="@drawable/bg_primary_round"
+            android:elevation="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="12"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_8ssp"
+            android:textStyle="bold"
+            android:translationX="@dimen/_minus2sdp"
+            android:translationY="@dimen/_minus2sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/btn_next"
+            app:layout_constraintTop_toTopOf="@id/btn_next" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:contentDescription="Hint"
+                android:src="@drawable/img_bulb" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressCompleted"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:max="100"
+        android:progressDrawable="@drawable/bg_rectangular"
+        app:layout_constraintBottom_toTopOf="@id/rv_color"
+        app:trackCornerRadius="@dimen/_5sdp"
+        app:trackThickness="@dimen/_7sdp" />
+
+    <ImageView
+        android:id="@+id/imgGift30"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:contentDescription="Gift"
+        android:src="@drawable/img_gift"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/progressCompleted"
+        app:layout_constraintHorizontal_bias="0.30"
+        app:layout_constraintLeft_toLeftOf="@id/progressCompleted"
+        app:layout_constraintRight_toRightOf="@id/progressCompleted"
+        app:layout_constraintTop_toTopOf="@id/progressCompleted" />
+
+    <ImageView
+        android:id="@+id/imgGift80"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:contentDescription="Gift"
+        android:src="@drawable/img_gift"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/progressCompleted"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:layout_constraintLeft_toLeftOf="@id/progressCompleted"
+        app:layout_constraintRight_toRightOf="@id/progressCompleted"
+        app:layout_constraintTop_toTopOf="@id/progressCompleted" />
+
+    <FrameLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- 🔙 TV Remote Focusable Back Button -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/bg_play_button_yellow"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_loading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_sketch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_progress"
+            style="@style/p1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Loading Please Wait"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_sketch" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/kids_primary"
+            android:progress="0"
+            android:progressDrawable="@drawable/gradient_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_progress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

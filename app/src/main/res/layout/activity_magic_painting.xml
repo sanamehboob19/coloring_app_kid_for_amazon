@@ -122,7 +122,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.MagicPaintingView
+                <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.MagicPaintingView
                     android:id="@+id/magicPaintingView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />

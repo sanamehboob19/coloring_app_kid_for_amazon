@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_doddle_bg_landscape"
+    android:padding="@dimen/_8sdp">
+
+    <!-- 🎛️ LEFT SIDE PANEL: Top Controls, Title, Target Preview & Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutLeftSidePanel"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_game_header_banner"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Top Header Row: Back, Title, Hint, Clear -->
+        <LinearLayout
+            android:id="@+id/layoutTopHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- TV Remote Focusable Back Button -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:strokeColor="@color/kids_primary"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Back"
+                    android:src="@android:drawable/ic_menu_revert"
+                    app:tint="@color/kids_primary" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- TV Remote Focusable Hint Button -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnHint"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/kids_secondary"
+                app:cardCornerRadius="@dimen/_16sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="?"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- TV Remote Focusable Clear Button -->
+            <ImageButton
+                android:id="@+id/btnClear"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:background="@drawable/bg_bubble_btn_orange"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:contentDescription="Clear"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bubble_trash" />
+        </LinearLayout>
+
+        <!-- Model Title -->
+        <TextView
+            android:id="@+id/tvModelTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTopHeader"
+            tools:text="Smiley Face 😊" />
+
+        <!-- Target Model Preview & Navigation Arrows -->
+        <LinearLayout
+            android:id="@+id/layoutTargetRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tvModelTitle">
+
+            <!-- TV Remote Focusable Prev Arrow -->
+            <TextView
+                android:id="@+id/btnPrevModel"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bg_kid_button_primary"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="◀"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <!-- Target Model Preview Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTargetPreview"
+                android:layout_width="@dimen/_68sdp"
+                android:layout_height="@dimen/_68sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:strokeColor="@color/card_border"
+                app:strokeWidth="2dp">
+
+                <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.PixelGridView
+                    android:id="@+id/targetGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- TV Remote Focusable Next Arrow -->
+            <TextView
+                android:id="@+id/btnNextModel"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bg_btn_finish_gold"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="▶"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <!-- Color Palette Dock inside Left Panel -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPaletteDock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardBackgroundColor="#F2FFFFFF"
+            app:cardCornerRadius="@dimen/_16sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:strokeColor="@color/card_border"
+            app:strokeWidth="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTargetRow">
+
+            <LinearLayout
+                android:id="@+id/layoutColorPalette"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_6sdp" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 🖼️ RIGHT SIDE: Full Centered Interactive Pixel Art Grid -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardInteractiveGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_6sdp"
+        app:cardPreventCornerOverlap="true"
+        app:strokeColor="@color/kids_primary"
+        app:strokeWidth="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/layoutLeftSidePanel"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.PixelGridView
+            android:id="@+id/interactiveGridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

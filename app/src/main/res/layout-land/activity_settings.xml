@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_doddle_bg_landscape">
+
+    <!-- 🌟 TOP HEADER OPTIMIZED FOR LANDSCAPE -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTopHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_game_header_banner"
+        android:elevation="@dimen/_6sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvScreenTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:shadowColor="#66000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="2"
+            android:text="SETTINGS ⚙️"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnClose"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 📺 TV Remote Focusable Close Button -->
+        <FrameLayout
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:background="@drawable/bg_btn_close_pink"
+            android:clickable="true"
+            android:elevation="@dimen/_4sdp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center"
+                android:contentDescription="Close"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 🎛️ SETTINGS CONTENT CARD CONTAINER OPTIMIZED FOR LANDSCAPE -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_64sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="#F2FFFFFF"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTopHeader"
+        app:strokeColor="@color/card_border"
+        app:strokeWidth="@dimen/_3sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <!-- 🎵 BACKGROUND MUSIC TOGGLE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/_6sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:contentDescription="Music Icon"
+                    android:src="@drawable/ic_music_on"
+                    app:tint="@color/kids_primary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Background Music"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/_13ssp" />
+
+                <!-- 📺 TV Remote Focusable Switch -->
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@color/kids_primary" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="#E0E0E0" />
+
+            <!-- 🔊 VOICE / SOUND FX TOGGLE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/_6sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:contentDescription="Sound Icon"
+                    android:src="@android:drawable/ic_lock_silent_mode_off"
+                    app:tint="@color/kids_secondary" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Voice &amp; Sound FX"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/_13ssp" />
+
+                <!-- 📺 TV Remote Focusable Switch -->
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@color/kids_secondary" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="#E0E0E0" />
+
+            <!-- ⭐ RATE US BUTTON -->
+            <LinearLayout
+                android:id="@+id/layoutRateUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:contentDescription="Rate Us"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:tint="@color/kids_accent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Rate Us ⭐"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/_13ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:tint="@color/text_dark" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="#E0E0E0" />
+
+            <!-- 📢 SHARE APP BUTTON -->
+            <LinearLayout
+                android:id="@+id/layoutShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:contentDescription="Share"
+                    android:src="@android:drawable/ic_menu_share"
+                    app:tint="@color/paint_blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Share with Friends 🚀"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/_13ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:tint="@color/text_dark" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="#E0E0E0" />
+
+            <!-- 🔒 PRIVACY POLICY BUTTON -->
+            <LinearLayout
+                android:id="@+id/layoutPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:contentDescription="Privacy Policy"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    app:tint="@color/paint_purple" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Privacy Policy 🔒"
+                    android:textColor="@color/text_dark"
+                    android:textSize="@dimen/_13ssp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:tint="@color/text_dark" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -134,7 +134,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.DrawingView
+                <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.DrawingView
                     android:id="@+id/drawingView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />

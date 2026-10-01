@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="#F0EEEE">
 
-    <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.color_by_num_module.widget.ColoringView
+    <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.color_by_num_module.widget.ColoringView
         android:id="@+id/overlay"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -58,7 +58,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.color_by_num_module.widget.CircularCountdownBulbView
+    <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.color_by_num_module.widget.CircularCountdownBulbView
         android:id="@+id/imgIdleBulb"
         android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_60sdp"

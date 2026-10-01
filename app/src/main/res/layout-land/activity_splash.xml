@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".ui.activities.splash.SplashActivity">
+
+    <!-- 🎬 FULLSCREEN SPLASH VIDEO BACKGROUND -->
+    <VideoView
+        android:id="@+id/videoViewSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 🎛️ TOP ACTION BUTTONS (Settings, Rate, Share) -->
+    <LinearLayout
+        android:id="@+id/layoutTopButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:alpha="0"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 📺 TV Remote Focusable Settings -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnSettings"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/kids_secondary"
+            app:cardCornerRadius="@dimen/_18sdp"
+            app:cardElevation="@dimen/_4sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:contentDescription="Settings"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 📺 TV Remote Focusable Rate Us -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnRate"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/kids_accent"
+            app:cardCornerRadius="@dimen/_18sdp"
+            app:cardElevation="@dimen/_4sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:contentDescription="Rate Us"
+                android:src="@android:drawable/btn_star_big_on"
+                app:tint="@color/text_dark" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 📺 TV Remote Focusable Share App -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnShare"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/paint_blue"
+            app:cardCornerRadius="@dimen/_18sdp"
+            app:cardElevation="@dimen/_4sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_gravity="center"
+                android:contentDescription="Share App"
+                android:src="@android:drawable/ic_menu_share"
+                app:tint="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- 🌟 APP NAME BANNER -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appNameCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:alpha="0"
+        app:cardBackgroundColor="#EFFFFFFF"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="@dimen/_8sdp"
+        app:strokeColor="@color/kids_accent"
+        app:strokeWidth="@dimen/_2sdp"
+        app:layout_constraintBottom_toTopOf="@id/btnPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:shadowColor="#99000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="@string/app_name"
+            android:textColor="@color/kids_accent"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold|italic" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 🚀 3D PLAY BUTTON (TV Remote Focusable) -->
+    <FrameLayout
+        android:id="@+id/btnPlay"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:alpha="0"
+        android:background="@drawable/bg_play_button_yellow"
+        android:clickable="true"
+        android:elevation="@dimen/_8sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:contentDescription="Play"
+            android:src="@android:drawable/ic_media_play"
+            app:tint="@color/text_dark" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

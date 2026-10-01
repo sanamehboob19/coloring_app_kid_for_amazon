@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When TV remote highlights/focuses the item -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/kids_accent" />
+            <corners android:radius="16dp" />
+            <stroke android:width="4dp" android:color="@color/kids_primary_dark" />
+        </shape>
+    </item>
+    <!-- Normal state -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="16dp" />
+            <stroke android:width="2dp" android:color="@color/card_border" />
+        </shape>
+    </item>
+</selector>

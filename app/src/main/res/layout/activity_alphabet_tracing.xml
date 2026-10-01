@@ -101,7 +101,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutTopBar">
 
-        <com.nextguidance.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.AlphabetTracingView
+        <com.nz.coloringgamesforkidsdoodle.drawingkids.painting.customWidgets.AlphabetTracingView
             android:id="@+id/alphabetTracingView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

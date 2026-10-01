@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_coloring_ctgs_land"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- 📺 TV Remote Focusable Close Button -->
+    <FrameLayout
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/bg_btn_close_pink"
+        android:clickable="true"
+        android:elevation="@dimen/_8sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:contentDescription="Close"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+    <!-- 📺 TV Remote Focusable Left/Up Scroll Arrow -->
+    <FrameLayout
+        android:id="@+id/btnArrowUp"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:background="@drawable/bg_btn_nav_green"
+        android:clickable="true"
+        android:elevation="@dimen/_8sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="sans-serif-black"
+            android:text="◀"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp" />
+    </FrameLayout>
+
+    <!-- 📚 Collection Cards List (Optimized for Horizontal Landscape Navigation) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCollections"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:paddingVertical="@dimen/_24sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnArrowDown"
+        app:layout_constraintStart_toEndOf="@+id/btnArrowUp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_collection_card" />
+
+    <!-- 📺 TV Remote Focusable Right/Down Scroll Arrow -->
+    <FrameLayout
+        android:id="@+id/btnArrowDown"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/bg_btn_nav_green"
+        android:clickable="true"
+        android:elevation="@dimen/_8sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:fontFamily="sans-serif-black"
+            android:text="▶"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
